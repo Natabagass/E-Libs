@@ -11,19 +11,19 @@
     <title>E-Libs</title>
 </head>
 <body>
-    <div class="bg-[#2A3342] fixed w-full top-0 z-10">
+    <div class="bg-[#2A3342] fixed w-full top-0 z-50">
         <div class="py-5 flex w-full items-center">
             <div class="flex justify-evenly w-full">
                 <img class="h-10" src="/image/Logo-Elibs.png" alt="Logo">
                 <ul class="flex flex-row items-center text-[16px] font-Poppins">
-                    <a class="mr-6 cursor-pointer text-[#BBC3CF] hover:text-[#dee3eb]" href="/profile">Profile</a>
-                    <a class="mr-6 cursor-pointer text-[#BBC3CF] hover:text-[#dee3eb]" href="/genre">Genre</a>
-                    <a class="mr-6 cursor-pointer text-[#BBC3CF] hover:text-[#dee3eb]" href="/information">Information</a>
-                    <a class="mr-6 cursor-pointer text-[#BBC3CF] hover:text-[#dee3eb]" href="/resources">Resources</a>
+                    <a class="mr-14 cursor-pointer text-[#BBC3CF] hover:text-[#dee3eb]" href="/profile">Profile</a>
+                    <a class="mr-14 cursor-pointer text-[#BBC3CF] hover:text-[#dee3eb]" href="/genre">Genre</a>
+                    <a class="mr-14 cursor-pointer text-[#BBC3CF] hover:text-[#dee3eb]" href="/information">Information</a>
+                    <a class="mr-14 cursor-pointer text-[#BBC3CF] hover:text-[#dee3eb]" href="/resources">Resources</a>
                 </ul>
                 <div>
-                    <button class="text-[#BBC3CF] hover:text-[#dee3eb] mr-6 cursor-pointer">Log In</button>
-                    <button class="border border-[#22C55E] hover:bg-[#1baa4f] px-3 py-2 rounded-xl bg-[#22C55E] text-white">Sign Up</button>
+                    <a class="text-[#BBC3CF] hover:text-[#dee3eb] mr-6 cursor-pointer">Log In</a>
+                    <a class="border border-[#22C55E] hover:bg-[#1baa4f] px-3 py-2 rounded-xl bg-[#22C55E] text-white">Sign Up</a>
                 </div>
             </div>
         </div>
