@@ -12,19 +12,15 @@
 </head>
 <body>
     <div class="bg-[#2A3342] fixed w-full top-0 z-50">
-        <div class="py-5 flex w-full items-center">
-            <div class="flex justify-evenly w-full">
-                <img class="h-10" src="/image/Logo-Elibs.png" alt="Logo">
-                <ul class="flex flex-row items-center text-[16px] font-Poppins">
+        <div class="py-5 box-border flex w-full items-center">
+        <img class="h-10 ml-[150px] flex justify-start" src="/image/Logo-Elibs.png" alt="Logo">
+            <div class="flex w-full justify-center">
+                <ul class="flex flex-row justify-center items-center text-[16px] font-Poppins">
                     <a class="mr-14 cursor-pointer text-[#BBC3CF] hover:text-[#dee3eb]" href="/profile">Profile</a>
                     <a class="mr-14 cursor-pointer text-[#BBC3CF] hover:text-[#dee3eb]" href="/genre">Genre</a>
                     <a class="mr-14 cursor-pointer text-[#BBC3CF] hover:text-[#dee3eb]" href="/information">Information</a>
                     <a class="mr-14 cursor-pointer text-[#BBC3CF] hover:text-[#dee3eb]" href="/resources">Resources</a>
                 </ul>
-                <div>
-                    <a class="text-[#BBC3CF] hover:text-[#dee3eb] mr-6 cursor-pointer" href="/login">Log In</a>
-                    <a class="border border-[#22C55E] hover:bg-[#1baa4f] px-3 py-2 rounded-xl bg-[#22C55E] text-white">Sign Up</a>
-                </div>
             </div>
         </div>
     </div>
