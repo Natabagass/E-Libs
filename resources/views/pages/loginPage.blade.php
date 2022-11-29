@@ -36,16 +36,17 @@
                             <h1 class="text-[30px] font-bold">Join our libraries</h1>
                             <h3 class="text-[#556987] text-[18px] font-medium items-start">Start your free Trial</h3>
                         </div>
-                        <form action="">
+                        <form action="/" method="post">
+                            @csrf
                             <div class="flex justify-center flex-col w-full px-[50px]">
                                 <label class="mt-8 text-[#333F51]">Email</label>
-                                <input type="text" class="w-full rounded-md shadow-md mt-2 p-3 placeholder:-pl-[600px]" placeholder="Enter your email adress">
+                                <input name="email" type="text" class="w-full rounded-md shadow-md mt-2 p-3 placeholder:-pl-[600px]" placeholder="Enter your email adress">
                                 <label class="mt-8 text-[#333F51]">Password</label>
-                                <input type="text" class="w-full rounded-md shadow-md mt-2 p-3 placeholder:-pl-[600px]" placeholder="Enter your password">
+                                <input name="password" type="password" class="w-full rounded-md shadow-md mt-2 p-3 placeholder:-pl-[600px]" placeholder="Enter your password">
                                 <button type="submit" class="bg-[#22C55E] px-[150px] p-3 mt-5 rounded-lg w-full text-white hover:bg-[#1eae53]">Get Started</button>
                                 <h4 class="text-center mt-3 text-[12px] text-[#8896AB]">OR</h4>
                                 <button class="w-full rounded-lg hover:bg-[#d9dde3] mt-5 border p-3 text-[#556987] flex flex-row text-center justify-center shadow-md "><span><img class="h-[25px] mr-2" src="/image/google.png" alt=""></span> Sign in with Google</button>
-                                <h4 class="text-center mt-5 text-[14px] font-medium">Doesn't have an account? <span class="text-[#22C55E] hover:text-[#1eae53]"><a href="/SignUp">Sign in</a></span></h4>
+                                <h4 class="text-center mt-5 text-[14px] font-medium">Doesn't have an account? <span class="text-[#22C55E] hover:text-[#1eae53]"><a href="/register">Sign Up</a></span></h4>
                             </div>
                         </form>
                     </div>

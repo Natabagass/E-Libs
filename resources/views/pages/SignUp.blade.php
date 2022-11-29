@@ -10,7 +10,8 @@
 <body>
     <div class="flex flex-row">
         <img class="h-screen" src="/image/card.png" alt="">
-        <form action="">
+        <form action="/register" method="POST">
+            @csrf
             <div class="flex p-[100px] flex-col">
                 <h1 class="font-bold text-[24px]">Register</h1>
                 <h4 class="font-normal w-[500px] text-[16px] mt-3">Let's get all you set up so you can verify your personal account and login setting up your profile</h4>
@@ -18,19 +19,19 @@
                 <div class="flex flex-row">
                     <div class="flex flex-col mt-5">
                         <label class="text-[#333F51] font-bold">First Name</label>
-                        <input type="text" class="w-[300px] border rounded-md shadow-md mt-2 p-3 placeholder:-pl-[600px]" placeholder="Enter your first name">
+                        <input type="text" name="first_name" class="w-[300px] border rounded-md shadow-md mt-2 p-3 placeholder:-pl-[600px]" placeholder="Enter your first name">
                         <label class="text-[#333F51] font-bold mt-5">Phone Number</label>
-                        <input type="number" class="w-[300px] border rounded-md shadow-md mt-2 p-3 placeholder:-pl-[600px]" placeholder="Enter your phone number">
+                        <input type="number" name="phone" class="w-[300px] border rounded-md shadow-md mt-2 p-3 placeholder:-pl-[600px]" placeholder="Enter your phone number">
                         <label class="text-[#333F51] font-bold mt-5">Password</label>
-                        <input type="password" class="w-[300px] border rounded-md shadow-md mt-2 p-3 placeholder:-pl-[600px]" placeholder="Enter your password">
+                        <input type="password" name="password" class="w-[300px] border rounded-md shadow-md mt-2 p-3 placeholder:-pl-[600px]" placeholder="Enter your password">
                     </div>
                     <div class="flex flex-col mt-5 ml-[100px]">
                         <label class="text-[#333F51] font-bold">Last Name</label>
-                        <input type="text" class="w-[300px] border rounded-md shadow-md mt-2 p-3 placeholder:-pl-[600px]" placeholder="Enter your last name">
+                        <input type="text" name="last_name" class="w-[300px] border rounded-md shadow-md mt-2 p-3 placeholder:-pl-[600px]" placeholder="Enter your last name">
                         <label class="text-[#333F51] font-bold mt-5">Email</label>
-                        <input type="text" class="w-[300px] border rounded-md shadow-md mt-2 p-3 placeholder:-pl-[600px]" placeholder="Enter your email">
+                        <input type="text" name="email" class="w-[300px] border rounded-md shadow-md mt-2 p-3 placeholder:-pl-[600px]" placeholder="Enter your email">
                         <label class="text-[#333F51] font-bold mt-5">Confirm Password</label>
-                        <input type="password" class="w-[300px] border rounded-md shadow-md mt-2 p-3 placeholder:-pl-[600px]" placeholder="Enter your password">
+                        <input type="password" name="password_confirmation" class="w-[300px] border rounded-md shadow-md mt-2 p-3 placeholder:-pl-[600px]" placeholder="Enter your password">
                     </div>
                 </div>
                 <div>
