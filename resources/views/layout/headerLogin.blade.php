@@ -22,8 +22,7 @@
                     <a class="mr-14 cursor-pointer text-[#556987] hover:text-[#dee3eb]" href="/resources">Resources</a>
                 </ul> -->
                 <div class="pt-2">
-                    <a class="text-[#556987] hover:text-[#dee3eb] mr-6 cursor-pointer" href="/login">Log In</a>
-                    <a class="border border-[#22C55E] hover:bg-[#1baa4f] px-3 py-2 rounded-xl bg-[#22C55E] text-white">Sign Up</a>
+                    <a href="/register" class="border border-[#22C55E] hover:bg-[#1baa4f] px-3 py-2 rounded-xl bg-[#22C55E] text-white">Sign Up</a>
                 </div>
             </div>
         </div>

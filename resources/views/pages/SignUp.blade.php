@@ -35,8 +35,8 @@
                     </div>
                 </div>
                 <div>
-                    <button type="submit" class="bg-[#22C55E] mt-[30px] text-white p-3 rounded-lg ">Create Account</button>
-                    <h4 class="mt-5 text-[14px] font-medium">Already have an account? <span class="text-[#22C55E] hover:text-[#1eae53]"><a href="/">Log In</a></span></h4>
+                    <button type="submit" class="bg-[#22C55E] mt-[20px] mb-3 text-white p-3 rounded-lg ">Create Account</button>
+                    <h4 class="text-[14px] font-medium">Already have an account? <span class="text-[#22C55E] hover:text-[#1eae53]"><a href="/">Log In</a></span></h4>
                 </div>
             </div>
         </form>

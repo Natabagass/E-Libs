@@ -21,6 +21,10 @@
                     <a class="mr-14 cursor-pointer text-[#BBC3CF] hover:text-[#dee3eb]" href="/information">Information</a>
                     <a class="mr-14 cursor-pointer text-[#BBC3CF] hover:text-[#dee3eb]" href="/resources">Resources</a>
                 </ul>
+                <form action="/logout" method="post">
+                    @csrf
+                    <button type="submit" class="border flex border-[#22C55E] hover:bg-[#1baa4f] px-3 py-2 rounded-xl bg-[#22C55E] text-white">Log Out</button>
+                </form>
             </div>
         </div>
     </div>
