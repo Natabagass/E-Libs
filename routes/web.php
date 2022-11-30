@@ -6,7 +6,6 @@ use App\Http\Controllers\LoginController;
 use App\Http\Request\UpdateProfileRequest;
 use App\Http\Controllers\ProfileController;
 
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,7 +25,7 @@ Route::get('/home', function () {
     return view('pages.home');
 });
 
-
+Route::get('/sweet', [SweetController::Class, 'index']);
 
 Route::group(['middleware' => 'auth'], function () {
 

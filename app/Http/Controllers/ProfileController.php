@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Validator;
 
 class ProfileController extends Controller
 {
@@ -20,15 +22,6 @@ class ProfileController extends Controller
         ]);
     }
 
-    // public function update(Request $request)
-    // {
-    // $request->user()->update(
-    //     $request->all()
-    // );
-
-    // return redirect()->route('profile.edit');
-    // }
-
     public function update(Request $request)
     {
         $rules = [
@@ -37,10 +30,22 @@ class ProfileController extends Controller
             'phone' => 'required',
         ];
 
+        $validator = Validator::make($request->all(),[
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'phone' => 'required',
+        ]);
+
+        if ($validator->fails()) {
+            return redirect('/profile')
+                ->with('errorForm', $validator->errors()->getMessages())
+                ->withInput();
+        }
+
         $validatedData = $request->validate($rules);
 
         User::where('id', auth()->user()->id)->update($validatedData);
-
-        return redirect('/profile')->with('message', 'Data diri sudah di update');
+        
+        return redirect('/profile')->with('success', 'Data Updated!');
     }
 }
