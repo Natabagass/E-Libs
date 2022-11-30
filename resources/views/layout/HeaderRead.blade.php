@@ -12,9 +12,14 @@
 </head>
 <body>
     <div class="bg-[#2A3342] fixed w-full top-0 z-50">
-        <div class="py-5 box-border flex justify-around w-full items-center">
-        <img class="h-10" src="/image/Logo-Elibs.png" alt="Logo">
-            <div class="flex justify-around">
+        <div class="py-5 flex w-full items-center">
+            <div class="flex justify-between w-full mx-[150px]">
+                <img class="h-10" src="/image/Logo-Elibs.png" alt="Logo">
+                <ul class="flex flex-row items-center text-[16px] font-Poppins">
+                    <a class="mr-14 cursor-pointer text-[#BBC3CF] hover:text-[#dee3eb]" href="/home">Home</a>
+                    <a class="mr-14 cursor-pointer text-[#BBC3CF] hover:text-[#dee3eb]" href="/profile">Profile</a>
+                    <a class="mr-14 cursor-pointer text-[#BBC3CF] hover:text-[#dee3eb]" href="/genre">Genre</a>
+                </ul>
                 <form action="/logout" method="post">
                     @csrf
                     <button type="submit" class="border flex border-[#22C55E] hover:bg-[#1baa4f] px-3 py-2 rounded-xl bg-[#22C55E] text-white">Log Out</button>
