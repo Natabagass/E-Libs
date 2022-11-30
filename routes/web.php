@@ -25,7 +25,9 @@ Route::get('/home', function () {
     return view('pages.home');
 });
 
-Route::get('/sweet', [SweetController::Class, 'index']);
+Route::get('/genre', function () {
+    return view('pages.genre');
+});
 
 Route::group(['middleware' => 'auth'], function () {
 

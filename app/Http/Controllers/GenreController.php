@@ -7,7 +7,7 @@ use App\Models\Category;
 use Illuminate\Support\Facades\DB;
 use Inertia\Inertia;
 
-class CategoryController extends Controller
+class GenreController extends Controller
 {
     public function index()
     {

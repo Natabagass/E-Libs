@@ -32,7 +32,7 @@
                 <h4 class="text-[30px]">ELECTRONIC LIBRARIES</h4>
                 <h6 class="mt-16 mb-[150px] font-medium text-[15px] text-[#BBC3CF]">"The more that you read, the more thinks you will know.<br/> The more that you learn, the more place<br/> that you'll go"</h6>
                 <div class="font-medium cursor-pointer">
-                    <a class="mr-5 p-3 rounded-lg bg-[#22C55E] hover:bg-[#1baa4f]">Read Journal</a>
+                    <a href="/genre" class="mr-5 p-3 rounded-lg bg-[#22C55E] hover:bg-[#1baa4f]">Read Journal</a>
                     <a class="bg-[#404F65] hover:bg-[#a1a7b1] p-3 rounded-lg" href="/profile">Profile</a>
                 </div>
             </div>
