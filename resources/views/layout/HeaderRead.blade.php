@@ -11,7 +11,7 @@
     <title>E-Libs</title>
 </head>
 <body>
-    <img class="mt-2 z-10 relative" src="/image/BG Wave atas.png" alt="logo">
+    <img class="mt-1 z-10 relative" src="/image/BG Wave atas.png" alt="logo">
         <div class="bg-[#2A3342]">
             <div class="pb-5 z-50 relative -mt-[5px] flex w-full items-center">
                 <div class="flex justify-between w-full mx-[150px]">

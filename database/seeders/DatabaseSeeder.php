@@ -2,8 +2,13 @@
 
 namespace Database\Seeders;
 
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Book;
+use App\Models\Category;
+use App\Models\Stakeholder;
+use App\Models\Admin;
+use App\Models\Testimonial;
 use Illuminate\Database\Seeder;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class DatabaseSeeder extends Seeder
 {
@@ -14,11 +19,41 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        Category::create([
+            'name' => 'Web Programming',
+            'stakeholder_id' => 1
+        ]);
+        
+        Category::create([
+            'name' => 'Anime',
+            'stakeholder_id' => 2
+        ]);
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        Category::create([
+            'name' => 'Personal',
+            'stakeholder_id' => 3
+        ]);
+
+        Stakeholder::create([
+            'name' => 'Stakeholder 1'
+        ]);
+        
+        Stakeholder::create([
+            'name' => 'Stakeholder 2'
+        ]);
+
+        Stakeholder::create([
+            'name' => 'Stakeholder 3'
+        ]);
+
+        Admin::create([
+            'name' => 'Admin',
+            'email' => 'admin@gmail.com',
+            'password' => 'admin123'
+        ]);
+
+        Book::factory(40)->create();
+
+        Testimonial::factory(4)->create();
     }
 }

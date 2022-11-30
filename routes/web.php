@@ -5,6 +5,9 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
 use App\Http\Request\UpdateProfileRequest;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\GenreController;
+use App\Http\Controllers\BookController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -25,9 +28,13 @@ Route::get('/home', function () {
     return view('pages.home');
 });
 
-Route::get('/genre', function () {
-    return view('pages.genre');
-});
+
+
+Route::get('/genre', [GenreController::class, 'index'])->middleware('auth');
+Route::get('/genre/{id}', [GenreController::class, 'show'])->middleware('auth');
+Route::get('/book/{id}', [BookController::class, 'read'])->middleware('auth');
+
+
 
 Route::group(['middleware' => 'auth'], function () {
 

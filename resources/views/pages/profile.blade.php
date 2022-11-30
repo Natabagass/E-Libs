@@ -10,7 +10,7 @@
 <body>
     @include('layout.headerRead')
     <div class="bg-[#2A3342]">
-        <h1 class="text-[36px] pt-[20px] justify-center flex text-white">PROFILE</h1>
+        <h1 class="text-[36px] pt-[20px] justify-center font-bold flex text-white">PROFILE</h1>
         <form action="{{ route( 'pages.profile.update') }}" method="POST">
             @method('patch')
             @csrf

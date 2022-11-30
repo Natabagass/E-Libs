@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Category;
+use App\Models\Book;
 use Illuminate\Support\Facades\DB;
 use Inertia\Inertia;
 
@@ -17,9 +18,17 @@ class GenreController extends Controller
             $categories->where('name', 'like', '%' . request('search') . '%');
         }
 
-        return Inertia::render('Admin/AdminCategory', [
+        return view('pages.genre', [
             'name' => auth()->user()->name,
-            'categories' => $categories->paginate(10)->withQueryString()
+            'categories' => $categories->get()
+        ]);
+    }
+
+    public function show($id){
+        $books = Book::where('category_id', $id)->get();
+
+        return view('pages.listBook', [
+            'books' => $books
         ]);
     }
 
