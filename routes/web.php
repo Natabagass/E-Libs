@@ -33,11 +33,23 @@ Route::get('/post', function () {
     return view('post.view');
 });
 
-Route::get('/post', [PostController::class, 'index'])->middleware('auth');;
+// Route::get('/create', function () {
+//     return view('post.create');
+// });
+Route::get('/post', [PostController::class, 'index'])->middleware('auth')->name('post');
+
+Route::get('/create', [PostController::class, 'create'])->middleware('auth');
+Route::post('/create', [PostController::class, 'store'])->middleware('auth');
+
+
+Route::get('/edit', [PostController::class, 'edit'])->middleware('auth');
+Route::post('/edit', [PostController::class, 'update'])->middleware('auth');
+
 
 Route::get('/genre', [GenreController::class, 'index'])->middleware('auth');
 Route::get('/genre/{id}', [GenreController::class, 'show'])->middleware('auth');
 Route::get('/book/{id}', [BookController::class, 'read'])->middleware('auth');
+Route::get('/post/{id}}', [BookController::class, 'read'])->middleware('auth');
 
 
 
