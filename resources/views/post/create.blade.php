@@ -11,7 +11,7 @@
 @include('layout.headerRead')
 <div class="mx-auto mb-10">
     <div class="p-5 rounded shadow-sm">
-        <form action="" method="POST" enctype="multipart/form-data">
+        <form action="/create" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mt-5 font-semibold">
                 <label class="text-white">Book Title</label>
@@ -80,8 +80,8 @@
         </form>
     </div>
     <div class="flex justify-end mr-[150px]">
-            <a href="/post" class="p-3 text-[16px] flex w-[60px] text-sm font-semibold text-white bg-[#22C55E] rounded-lg border border-green-700 hover:bg-green-600 focus:ring-2 focus:outline-none focus:ring-green-400">Back</a>
-        </div>
+        <a href="/post" class="p-3 text-[16px] flex w-[60px] text-sm font-semibold text-white bg-[#22C55E] rounded-lg border border-green-700 hover:bg-green-600 focus:ring-2 focus:outline-none focus:ring-green-400">Back</a>
+    </div>
     <img class="absolute" src="/image/bg-wave.png" alt="">
 </div>
 

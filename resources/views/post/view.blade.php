@@ -62,8 +62,8 @@
                             <a class="py-2 px-3 bg-yellow-500 hover:bg-yellow-600 rounded-md font-medium text-xs text-white" href=" {{ $book->link }}">LINK</a>
                         </td>
                         <td class="px-10 py-2 flex-row flex text-center">
-                            <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="" method="GET">
-                                <button class="bg-blue-500 text-white px-4 py-2 rounded hover:border-indigo-700 text-xs focus:outline-none mr-2"><a href="/edit">EDIT</a></button>
+                            <button class="bg-blue-500 text-white px-4 py-2 rounded hover:border-indigo-700 text-xs focus:outline-none mr-2"><a href="/post/edit/{{ $book->id }}">EDIT</a></button>
+                            <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="/post/delete/{{ $book->id }}" method="POST">
                                     @csrf
                                     @method('DELETE')
                                 <button type="submit" class="bg-red-500 text-white px-4 ml-3 -mr-[60px] py-2 rounded-lg hover:border-red-700 text-xs focus:outline-none">DELETE</button>

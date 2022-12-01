@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Book;
-use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use App\Models\Book;
+use App\Models\Category;
 
 
 class PostController extends Controller
@@ -56,7 +56,7 @@ class PostController extends Controller
     }
     }
 
-    public function update(Request $request, Post $post)
+    public function update(Request $request)
     {
         $this->validate($request, [
             'title'     => 'required',
@@ -67,9 +67,9 @@ class PostController extends Controller
     ]);
     
   //get data post by ID
-    $books = Book::findOrFail($books->id);
+    $book = Book::findOrFail($request->id);
 
-        $books->update([
+        $book->update([
             'title'     => $request->title,
             'author'   => $request->author,
             'link' => $request -> link,
@@ -77,29 +77,28 @@ class PostController extends Controller
             'category_id' => $request -> category_id
         ]);
 
-    if($books){
+    if($book){
      //redirect dengan pesan sukses
-        return redirect()->route('post.view')->with(['success' => 'Data Berhasil Diupdate!']);
+        return redirect()->route('post')->with(['success' => 'Data Berhasil Diupdate!']);
         }else{
      //redirect dengan pesan error
-        return redirect()->route('post.view')->with(['error' => 'Data Gagal Diupdate!']);
+        return redirect()->route('post')->with(['error' => 'Data Gagal Diupdate!']);
     }
     }
 
 
     public function destroy($id)
     {
-        $books = Book::table('books')->where('id', '=', $request->id)->get();
-        if ($books->count() > 0){
-            Book::table('books')->where('id', '=', $request->id)->delete();
-        } else {
-            return redirect('/post')->with('message', 'Book not yet deleted!');
-        }
+        $books = Book::where('id', '=', $id)->delete();
+
         return redirect('/post')->with('message', 'Book has been deleted!');
     }
 
-    public function edit(Book $books)
+    public function edit($id)
     {
-    return view('post.edit');
+        $book = Book::where('id', '=', $id)->first();
+        return view('post.edit', [
+            'book' => $book
+        ]);
     }
 }
