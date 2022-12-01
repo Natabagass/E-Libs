@@ -8,7 +8,7 @@
     @vite('resources/css/app.css')
 </head>
 <body>
-    @include('layout.HeaderRead')
+    @include('layout.headerRead')
     <div class="bg-[#2A3342]">
         <div class="flex justify-center">
             <div class="flex flex-col w-1/2 mt-[20px]">

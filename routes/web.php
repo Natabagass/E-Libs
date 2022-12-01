@@ -7,6 +7,7 @@ use App\Http\Request\UpdateProfileRequest;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\GenreController;
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\PostController;
 
 
 /*
@@ -28,7 +29,11 @@ Route::get('/home', function () {
     return view('pages.home');
 });
 
+Route::get('/post', function () {
+    return view('post.view');
+});
 
+Route::get('/post', [PostController::class, 'index'])->middleware('auth');;
 
 Route::get('/genre', [GenreController::class, 'index'])->middleware('auth');
 Route::get('/genre/{id}', [GenreController::class, 'show'])->middleware('auth');

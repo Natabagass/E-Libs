@@ -13,7 +13,7 @@
 <body>
     @include('layout.headerHome')
     <div class="bg-[#2A3342] pt-24 pb-[100px]">
-            <form class="flex items-center ml-[300px] justify-center">   
+            <!-- <form class="flex items-center ml-[300px] justify-center">   
                 <label for="simple-search" class="sr-only">Search</label>
                 <div class="relative -ml-[100px]">
                     <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
@@ -25,7 +25,7 @@
                     Search
                     <span class="sr-only">Search</span>
                 </button>
-            </form>
+            </form> -->
         <div class="pt-20 flex px-[250px] text-white font-Poppins">
             <div class="flex font-bold flex-col w-1/2">
                 <h1 class="text-[60px]">E-libs</h1>
