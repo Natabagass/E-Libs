@@ -16,6 +16,7 @@
             @csrf
             @method('PUT')
             <div class="mt-5 font-semibold">
+                <input type="text" class="hidden" name="id" value="{{$book->id}}">
                 <label class="text-white">Book Title</label>
                 <input type="text" value="{{ old('title', $book->title) }}" name="title"
                 class="w-full bg-gray-200 p-2 rounded shadow-sm border border-gray-200 focus:outline-none focus:bg-white mt-2"

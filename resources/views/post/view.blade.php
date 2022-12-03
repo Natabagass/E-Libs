@@ -59,7 +59,7 @@
                             {{ $book->author }}
                         </td>
                         <td class="px-10 py-2">
-                            <a class="py-2 px-3 bg-yellow-500 hover:bg-yellow-600 rounded-md font-medium text-xs text-white" href=" {{ $book->link }}">LINK</a>
+                            <a target="blank" class="py-2 px-3 bg-yellow-500 hover:bg-yellow-600 rounded-md font-medium text-xs text-white" href=" {{ $book->link }}">LINK</a>
                         </td>
                         <td class="px-10 py-2 flex-row flex text-center">
                             <button class="bg-blue-500 text-white px-4 py-2 rounded hover:border-indigo-700 text-xs focus:outline-none mr-2"><a href="/post/edit/{{ $book->id }}">EDIT</a></button>

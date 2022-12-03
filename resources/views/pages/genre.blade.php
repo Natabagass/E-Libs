@@ -12,7 +12,7 @@
     <div class="bg-[#2A3342]">
         <div class="flex justify-center">
             <div class="flex flex-col w-1/2 mt-[20px]">
-            <form class="flex items-center ml-[100px] mb-[50px] justify-center">   
+            <!-- <form class="flex items-center ml-[100px] mb-[50px] justify-center">   
                 <label for="simple-search" class="sr-only">Search</label>
                 <div class="relative -ml-[100px]">
                     <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
@@ -24,7 +24,7 @@
                     Search
                     <span class="sr-only">Search</span>
                 </button>
-            </form>
+            </form> -->
                 @foreach ($categories as $category)
                     <div class="bg-[#333F51] mt-5 p-3 flex justify-between rounded-xl">
                         <label class="text-white ml-3 font-bold mt-2">{{$category->name}}</label>
