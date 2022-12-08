@@ -8,6 +8,8 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\GenreController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\AuthorController;
+use App\Http\Controllers\AuthorPostController;
 
 
 /*
@@ -49,10 +51,22 @@ Route::get('/genre', [GenreController::class, 'index'])->middleware('auth');
 Route::get('/genre/{id}', [GenreController::class, 'show'])->middleware('auth');
 Route::get('/book/{id}', [BookController::class, 'read'])->middleware('auth');
 
+
+Route::get('/postAuthor', [AuthorPostController::class, 'index'])->middleware('auth')->name('postAuthor');;
+Route::get('/postAuthor/edit/{id}', [AuthorPostController::class, 'edit'])->middleware('auth');
+Route::put('/postAuthor/update', [AuthorPostController::class, 'update'])->middleware('auth');
+Route::delete('/postAuthor/delete/{id}', [AuthorPostController::class, 'destroy']); // delete kategori
+Route::get('/createAuthor', [AuthorPostController::class, 'create'])->middleware('auth');
+Route::post('/createAuthor', [AuthorPostController::class, 'store'])->middleware('auth');
+
+
+Route::get('/author', [AuthorController::class, 'index'])->middleware('auth');
+Route::get('/author/{id}', [AuthorController::class, 'show'])->middleware('auth');
+
+
 Route::get('/post', [PostController::class, 'index'])->middleware('auth')->name('post');
 Route::get('/post/edit/{id}', [PostController::class, 'edit'])->middleware('auth');
 Route::put('/post/update', [PostController::class, 'update'])->middleware('auth');
-// Route::get('/post/{id}', [PostController::class, 'destroy'])->middleware('auth')->name('destroy');
 Route::delete('/post/delete/{id}', [PostController::class, 'destroy']); // delete kategori
 
 

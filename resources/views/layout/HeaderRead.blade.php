@@ -20,6 +20,7 @@
                         <a class="mr-14 cursor-pointer text-[#BBC3CF] hover:text-[#dee3eb]" href="/home">Home</a>
                         <a class="mr-14 cursor-pointer text-[#BBC3CF] hover:text-[#dee3eb]" href="/profile">Profile</a>
                         <a class="mr-14 cursor-pointer text-[#BBC3CF] hover:text-[#dee3eb]" href="/genre">Genre</a>
+                        <a class="mr-14 cursor-pointer text-[#BBC3CF] hover:text-[#dee3eb]" href="/author">Author</a>
                         <a class="mr-14 cursor-pointer text-[#BBC3CF] hover:text-[#dee3eb]" href="/post">Add Book</a>
                     </ul>
                     <form action="/logout" method="post">

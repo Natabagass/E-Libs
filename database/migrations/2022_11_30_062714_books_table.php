@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('author');
             $table->string('link');
             $table->foreignId('category_id');
+            $table->foreignId('author_id');
             $table->timestamps();
         });
     }

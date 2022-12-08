@@ -15,31 +15,28 @@
     <div class="bg-[#2A3342] p-5 rounded shadow-sm">
         <div class="grid grid-cols-8 gap-4 mb-4">
             <div class="col-span-1 mt-2">
-                <a href="/create"
+                <a href="/createAuthor"
                     class="w-full bg-[#22C55E] hover:bg-green-600 text-white p-3 rounded shadow-sm focus:outline-none ">Add Book</a>
             </div>
             <div class="col-span-7">
-                <form action="/post" method="GET">
+                <form action="/postAuthor" method="GET">
                     <input type="text" name="search"
                     class="w-full bg-gray-200 p-2 rounded shadow-sm border border-gray-200 focus:outline-none focus:bg-white"
-                    placeholder="Input your book">
+                    placeholder="Search your author">
                 </form>
             </div>
         </div>
         <table class="min-w-full table-auto">
             <thead class="justify-between">
                 <tr class="bg-[#333F51] w-full">
-                    <th class="px-10 py-2">
-                        <span class="text-white">TITLE</span>
+                    <th class="px-10 py-2 text-left">
+                        <span class="text-white">Nama</span>
+                    </th>
+                    <th class="px-28 py-2 text-left">
+                        <span class="text-white">Alamat</span>
                     </th>
                     <th class="px-10 py-2 text-left">
-                        <span class="text-white">Category ID</span>
-                    </th>
-                    <th class="px-10 py-2 text-left">
-                        <span class="text-white">AUTHOR</span>
-                    </th>
-                    <th class="px-10 py-2 text-left">
-                        <span class="text-white">LINK</span>
+                        <span class="text-white">Tanggal Lahir</span>
                     </th>
                     <th class="px-10 py-2">
                         <span class="text-white">ACTION</span>
@@ -47,23 +44,20 @@
                 </tr>
             </thead>
             <tbody class="bg-[#2a33429c]">
-                @forelse($books as $book)
+                @forelse($authors as $author)
                     <tr class="bg-[#D9D9D9] border-2 border-gray-200">
                         <td class="px-10 py-2">
-                            {{ $book->title }}
+                            {{ $author->name }}
                         </td>
                         <td class="px-20 py-2">
-                            {{ $book->category_id }}
+                            {{ $author->alamat }}
                         </td>
                         <td class="px-10 py-2">
-                            {{ $book->author }}
-                        </td>
-                        <td class="px-10 py-2">
-                            <a target="blank" class="py-2 px-3 bg-yellow-500 hover:bg-yellow-600 rounded-md font-medium text-xs text-white" href=" {{ $book->link }}">LINK</a>
+                            {{ $author->tanggal_lahir }}
                         </td>
                         <td class="px-10 py-2 flex-row flex text-center">
-                            <button class="bg-blue-500 text-white px-4 py-2 rounded hover:border-indigo-700 text-xs focus:outline-none mr-2"><a href="/post/edit/{{ $book->id }}">EDIT</a></button>
-                            <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="/post/delete/{{ $book->id }}" method="POST">
+                            <button class="bg-blue-500 text-white px-4 py-2 rounded hover:border-indigo-700 text-xs focus:outline-none mr-2"><a href="/postAuthor/edit/{{ $author->id }}">EDIT</a></button>
+                            <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="/postAuthor/delete/{{ $author->id }}" method="POST">
                                     @csrf
                                     @method('DELETE')
                                 <button type="submit" class="bg-red-500 text-white px-4 ml-3 -mr-[60px] py-2 rounded-lg hover:border-red-700 text-xs focus:outline-none">DELETE</button>
@@ -78,7 +72,7 @@
             </tbody>
         </table>
         <div class="mt-2">
-            {{ $books->links('vendor.pagination.tailwind') }}
+            {{ $authors->links('vendor.pagination.tailwind') }}
         </div>
     </div>
     <img class="absolute" src="/image/bg-wave.png" alt="">
