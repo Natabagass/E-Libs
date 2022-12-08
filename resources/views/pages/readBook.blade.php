@@ -11,7 +11,7 @@
     @include('layout.HeaderRead')
     <div>
         @foreach ($books as $book)
-            <div class="ml-[160px] mt-[60px] h-fit flex flex-col text-white">
+            <div class="ml-[160px] mt-[60px] h-[550px] flex flex-col text-white">
                 <h1 class="text-[48px] w-[1000px] font-bold">{{$book->title}}</h1>
                 <h4 class="font-light mt-[20px] text-[20px]">By : {{$book->author}}</h4>
                 <div class="flex flex-row my-[30px]">
@@ -24,7 +24,7 @@
                     <h1 class="text-[20px] mt-7 font-semibold">Category ID</h1>
                     <h3 class="mt-3">{{$book->category_id}}</h3>
                     <h1 class="text-[20px] mt-7 mb-7 font-semibold">Book Link</h1>
-                    <a class="bg-[#22C55E] p-3 rounded-xl" href="{{$book->link}}">Read Book</a>
+                    <a class="bg-[#22C55E] p-3 rounded-xl" target="blank" href="{{$book->link}}">Read Book</a>
                     <div class="flex justify-end mr-[150px]">
                         <a href="/genre/{{ $book->category_id }}" class="p-3 text-[16px] flex w-[60px] text-sm font-semibold text-white bg-[#22C55E] rounded-lg border border-green-700 hover:bg-green-600 focus:ring-2 focus:outline-none focus:ring-green-400">Back</a>
                     </div>

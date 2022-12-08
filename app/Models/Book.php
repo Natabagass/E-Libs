@@ -13,7 +13,8 @@ class Book extends Model
         'description',
         'author',
         'link',
-        'category_id'
+        'category_id',
+        'author_id'
     ];
 
     public function scopeFilter($query, array $filters)
