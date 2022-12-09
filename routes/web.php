@@ -26,11 +26,11 @@ use App\Http\Controllers\AuthorPostController;
 Route::get('/', function () {
     return view('pages.loginPage');
 });
-
+// Menambahkan route home
 Route::get('/home', function () {
     return view('pages.home');
 });
-
+// Menambahkan route post
 Route::get('/post', function () {
     return view('post.view');
 });
