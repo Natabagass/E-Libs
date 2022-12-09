@@ -18,16 +18,14 @@ class Book extends Model
         'author_id'
     ];
 
-    public function scopeFilter($query, array $filters)
-    {
-        $query->when($filters['search'] ?? false, function($query, $search) {
-            return $query->where('title', 'like', '%' . $search . '%')
-            ->orWhere('author', 'like', '%' . $search . '%');
-        });
-    }
-
     public function category()
     {
         return $this->belongsTo(Category::class);
+    }
+
+
+    public function author()
+    {
+        return $this->belongsTo(Author::class);
     }
 }

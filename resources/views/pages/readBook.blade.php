@@ -11,7 +11,7 @@
     @include('layout.HeaderRead')
     <div>
         @foreach ($books as $book)
-            <div class="ml-[160px] mt-[60px] h-[550px] flex flex-col text-white">
+            <div class="ml-[160px] mt-[60px] h-[650px] flex flex-col text-white">
                 <h1 class="text-[48px] w-[1000px] font-bold">{{$book->title}}</h1>
                 <h4 class="font-light mt-[20px] text-[20px]">By : {{$book->author}}</h4>
                 <div class="flex flex-row my-[30px]">

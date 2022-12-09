@@ -70,8 +70,6 @@ Route::put('/post/update', [PostController::class, 'update'])->middleware('auth'
 Route::delete('/post/delete/{id}', [PostController::class, 'destroy']); // delete kategori
 
 
-
-
 Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/profile', [ProfileController::class, 'edit'])
