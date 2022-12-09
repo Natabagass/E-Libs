@@ -8,8 +8,6 @@
     @vite('resources/css/app.css')
 </head>
 <body>
-@extends('layout.app', ['title' => 'Data Posts'])
-
 @include('layout.headerRead')
 <div class="container mx-auto mt-10 mb-10">
     <div class="bg-[#2A3342] p-5 rounded shadow-sm">

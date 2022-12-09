@@ -8,7 +8,7 @@
     <title>E-Libs</title>
 </head>
 <body>
-@extends('layout.app', ['title' => 'Data Posts'])
+
 @include('layout.headerRead')
 <div class="container mx-auto mt-5 mb-10">
     <div class="bg-[#2A3342] p-5 rounded shadow-sm">
