@@ -50,6 +50,18 @@
             </div>
 
             <div class="mt-5 font-semibold">
+                <label class="text-white">Book Author ID</label>
+                <input type="text" name="author_id"
+                class="w-full bg-gray-200 p-2 rounded shadow-sm border border-gray-200 focus:outline-none focus:bg-white mt-2"
+                placeholder="Author ID"></input>
+                @error('title')
+                    <div class="bg-red-400 p-2 shadow-sm rounded mt-2">
+                        {{ $message }}
+                    </div>
+                @enderror
+            </div>
+
+            <div class="mt-5 font-semibold">
                 <label class="text-white">Book Link</label>
                 <input type="text" name="link"
                 class="w-full bg-gray-200 p-2 rounded shadow-sm border border-gray-200 focus:outline-none focus:bg-white mt-2"
