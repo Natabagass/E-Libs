@@ -118,13 +118,13 @@ class DatabaseSeeder extends Seeder
             'alamat'=> 'Jakarta, Norwegia',
         ]);
 
-        User::create([
-            'first_name' => 'nata',
-            'last_name' => 'bagas',
-            'phone' => '08912341514',
-            'email' => 'natabagas@gmail.com',
-            'password'=>'123456789',
-        ]);
+        // User::create([
+        //     'first_name' => 'nata',
+        //     'last_name' => 'bagas',
+        //     'phone' => '08912341514',
+        //     'email' => 'natabagas@gmail.com',
+        //     'password'=>'123456789',
+        // ]);
 
     }
 }

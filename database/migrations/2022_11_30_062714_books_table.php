@@ -11,6 +11,7 @@ return new class extends Migration
      *
      * @return void
      */
+    // Membuat migrations table buku
     public function up()
     {
         Schema::create('books', function (Blueprint $table) {
